@@ -101,6 +101,10 @@ function getBox(){
     }
 }
 
+document.querySelector("body").addEventListener("mouseup",function(){
+    click = false
+})
+
 
 setInterval(getBox,1000) //check for new box and click and mouseover
 
