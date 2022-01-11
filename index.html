@@ -1,44 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Assignment-05</title>
+        <link href="./style.css" rel="stylesheet">
         <script src="./script.js" async></script>
     </head>
-    
-    <style>
-        body{
-            position: relative;;
-        }
-        .all-buttons{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-            gap: 10px;
-        }
-        .buttons{
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            gap: 20px;
-        }
-        .button{
-            width: 120px;
-            height: 50px;
-        }
-        .grids{
-            display: flex;
-            justify-content: center;
-        }
-        .box{
-            height: 30px;
-            width: 30px;
-            border: 1px black solid;
-            margin: 1px 1px;
-        }
-        form{
-            margin-bottom: 5px;
-        }
-    </style>
 
     <body>
         <div class="all-buttons">
@@ -54,12 +20,14 @@
                 <button class="button" onclick="clearAllColors()">Clear all colors</button>
             </div>
             <form>
-                <label for="colors">Choose a color: </label>
+                <label for="colors">Color: </label>
                 <select id="colors" name="colors">
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
+                    <option value="">Choose</option>
+                    <option value="lightcoral">Red</option>
+                    <option value="lightgreen">Green</option>
                     <option value="black">Black</option>
-                    <option value="blue">Blue</option>
+                    <option value="cornflowerblue">Blue</option>
+                    <option value="mediumpurple">Purple</option>
                 </select>
             </form>
         </div>

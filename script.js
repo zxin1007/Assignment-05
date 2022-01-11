@@ -83,8 +83,7 @@ function getBox(){
     boxes = document.getElementsByClassName("box")
     for (let box of boxes){
         box.addEventListener('click', function(){
-            color = document.querySelector("#colors").value
-            box.style.backgroundColor = color
+            box.style.backgroundColor = document.querySelector("#colors").value
         })
 
         box.addEventListener("mouseup", function(){
@@ -92,11 +91,11 @@ function getBox(){
         });
 		box.addEventListener("mousedown", function(){
             click = true
+            box.style.backgroundColor =  document.querySelector("#colors").value
         });
 		box.addEventListener("mouseover", function(){
-            color = document.querySelector("#colors").value
             if (click){
-                box.style.backgroundColor =  color
+                box.style.backgroundColor =  document.querySelector("#colors").value
             }
         });
     }
