@@ -4,7 +4,7 @@ const gridRow = document.querySelector(".grid-row")
 const gridColumn = document.getElementsByClassName("grid-column")
 let color
 let boxes
-// let click = false
+let click = false
 
 function addRow(){
     if (grids.children.length===0){
@@ -86,24 +86,25 @@ function getBox(){
             box.style.backgroundColor = document.querySelector("#colors").value
         })
 
-        // box.addEventListener("mouseup", function(){
-        //     click = false
-        // });
-		// box.addEventListener("mousedown", function(){
-        //     click = true
-        //     box.style.backgroundColor =  document.querySelector("#colors").value
-        // });
+         box.addEventListener("mouseup", function(){
+             click = false
+         });
+		 box.addEventListener("mousedown", function(){
+             click = true
+             box.style.backgroundColor =  document.querySelector("#colors").value
+         });
+        //event.buttons === 1
 		box.addEventListener("mouseover", function(event){
-            if (event.buttons === 1){
+            if (click){
                 box.style.backgroundColor =  document.querySelector("#colors").value
             }
         });
     }
 }
 
-// document.querySelector("body").addEventListener("mouseup",function(){
-//     click = false
-// })
+ document.querySelector("body").addEventListener("mouseup",function(){
+     click = false
+ })
 
 
 setInterval(getBox,1000) //check for new box and click and mouseover
