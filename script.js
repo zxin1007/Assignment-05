@@ -86,15 +86,15 @@ function getBox(){
             box.style.backgroundColor = document.querySelector("#colors").value
         })
 
-         box.addEventListener("mouseup", function(){
+        box.addEventListener("mouseup", function(){
              click = false
          });
-		 box.addEventListener("mousedown", function(){
+	box.addEventListener("mousedown", function(){
              click = true
              box.style.backgroundColor =  document.querySelector("#colors").value
          });
         //event.buttons === 1
-		box.addEventListener("mouseover", function(event){
+	box.addEventListener("mouseover", function(event){
             if (click){
                 box.style.backgroundColor =  document.querySelector("#colors").value
             }
